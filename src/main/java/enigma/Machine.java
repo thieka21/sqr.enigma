@@ -1,3 +1,4 @@
+// classe ou sont declarer les differentes types de rotors 
 package enigma;
 
 public class Machine {
@@ -13,7 +14,7 @@ public class Machine {
 		middleRotor = middle;
 		rightRotor = right;
 	}
-
+// fonction permettant de definir les position des rotor
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -22,12 +23,14 @@ public class Machine {
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
 	
+	// fonction permettant de definir les directions des rotors
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
 
 	}
 
+	// fonction permettant de convertir les chaines de caracteres
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();
@@ -38,6 +41,7 @@ public class Machine {
 		return result;
 	}
 
+	// fonction permettant de convertir un caractere
 	char convertChar(char c) {
 		advanceRotors();
 		int charIndex = Rotor.toIndex(c);
@@ -52,7 +56,7 @@ public class Machine {
 		return Rotor.toLetter(output);
 
 	}
-
+	// fonnction permettant de definir ce que fait du rotors
 	void advanceRotors() {
 		boolean advanceLeft = false;
 		boolean advanceMiddle = false;

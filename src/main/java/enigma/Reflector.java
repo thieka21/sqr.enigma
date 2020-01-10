@@ -1,8 +1,10 @@
+// classe permettant de chiffer
 package enigma;
 
 /** Class that represents a reflector in the enigma.
  *  @author
  */
+// fonction refector qui definie ce que fait le reflector
 public class Reflector extends Rotor {
 	
 	int[] reflection;
@@ -19,11 +21,12 @@ public class Reflector extends Rotor {
 	private Reflector(int[] r){
 		reflection = r;
 	}
-        
+     // fonction refector qui converti ce que fait le reflector
     public int convertForward(int p) {
         return ((reflection[((p)%26+26)%26])%26+26)%26;
     }
 
+    // fonction refector qui definie ce que fait le reflector
     @Override
     public int convertBackward(int unused) {
         throw new UnsupportedOperationException();

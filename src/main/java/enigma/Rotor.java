@@ -1,5 +1,8 @@
+//Classe rotor
+
 package enigma;
 
+//fonction de la classe rotor qui chiffre sur 26 letrre et decode sur 26 lettre
 public class Rotor {
 
     private int position;
@@ -11,7 +14,7 @@ public class Rotor {
     public int getPosition() {
         return position;
     }
-
+  //fonction qui definie la position
     public void setPosition(int posn) {
         position = posn;
     }
@@ -47,11 +50,11 @@ public class Rotor {
 	protected Rotor() {
 		
 	}
-
+	 //fonction qui convertit la position
     public int convertForward(int p) {
         return ((cipher[((p+position)%26+26)%26]-position)%26+26)%26;
     }
-
+  //fonction qui convertit la position
     public int convertBackward(int e) {
         return ((bcipher[((e+position)%26+26)%26]-position)%26+26)%26;
     }
