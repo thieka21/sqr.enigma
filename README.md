@@ -17,15 +17,25 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
-
+public void configure
+public String convert(String msg)
+char convertChar(char c)
+void advanceRotors()// J'ai un doute par rapport a ce test mais je pense qu'on doit le tester
 ### Classe Reflector
 #### function
-
+public int convertForward(int p)
+public int convertBackward(int unused)
+public static Reflector reflectorFactory(String str)
 ### Classe Rotor
 #### function
-
+public int convertForward(int p)
+public int convertBackward(int e)
+public void advance()
+// J'ai un doute par rapport au fonctionsuivant mais je pense qu'on doit le tester
+protected boolean atNotch()
+protected static char toLetter(int p)
+protected static int toIndex(char c)
 ## Tricks & tips
-
 - Never test auto generate code
 - Never test creator (its a design problem)
 - Use @Test before each testFunction !
