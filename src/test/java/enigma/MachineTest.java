@@ -22,7 +22,6 @@ public class MachineTest {
 		String actual = m.convert(msg1);
 		assertEquals(expected, actual);
 	}
-
 	@Test
 	public void unconvert_Msg2_code2() {
 		Machine m = new Machine();
@@ -31,5 +30,4 @@ public class MachineTest {
 		String actual = m.convert(msg2);
 		assertEquals(expected, actual);
 	}
-
 }
