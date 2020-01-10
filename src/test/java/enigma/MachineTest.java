@@ -31,3 +31,4 @@ public class MachineTest {
 		assertEquals(expected, actual);
 	}
 }
+

@@ -32,6 +32,7 @@ public class Rotor {
 			return new Rotor(cipher, toIndex(s[0]));
 		}
 		
+		
 	}
 	
 	private Rotor(int[] c, int notch1, int notch2) {

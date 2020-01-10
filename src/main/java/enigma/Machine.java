@@ -56,6 +56,7 @@ public class Machine {
 		return Rotor.toLetter(output);
 
 	}
+	
 	// fonnction permettant de definir ce que fait du rotors
 	void advanceRotors() {
 		boolean advanceLeft = false;

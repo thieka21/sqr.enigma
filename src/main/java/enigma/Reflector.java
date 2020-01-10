@@ -22,6 +22,7 @@ public class Reflector extends Rotor {
 		
 	}
 	
+   
 	private Reflector(int[] r){
 		reflection = r;
 	}
